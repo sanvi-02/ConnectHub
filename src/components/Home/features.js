@@ -17,7 +17,7 @@ export default function Features() {
                         <div className="features-head">
                                 <div>
                                 
-                                <img className="logo" alt="ms-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png"></img>
+                                {/* <img className="logo" alt="ms-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png"></img> */}
                                 </div>
                                 <div className="features-heading">Features</div>
                                 <Link to="/" className="home">Home</Link>
@@ -86,7 +86,7 @@ export default function Features() {
                                                 <img src={screen}></img>
                                         </div>
                                         <div className="feature-text">
-                                        Enhance meetings and boost productivity by sharing your screen in Microsoft Teams.
+                                        Enhance meetings and boost productivity by sharing your screen in ConnectHub.
                                                 Present Your screen to everyone in the meeting 
                                                 and enjoy group meetings.
                                         </div>
@@ -122,7 +122,7 @@ export default function Features() {
                         </div>
                         <div className="landing-footer">
                                 <div className="footer-outer">
-                                Developed By Anshika Jain @ microsoft engage
+                                Developed By Sanvi Jain Btech IITRoorkee
                                 </div>
                         </div>
               

@@ -53,7 +53,7 @@ function App() {
         }>
         </Route>
         <Route exact path="/thanks" component={Thanks}></Route>
-        <Route exact path="/features" component={Features}></Route>
+        {/* <Route exact path="/features" component={Features}></Route> */}
         <Route path="/chat">
           <Chat currentUserId={currentUserId} peerInstance={peerInstance.current} theme={theme} setTheme={()=>setTheme(!theme)}></Chat>
         </Route>

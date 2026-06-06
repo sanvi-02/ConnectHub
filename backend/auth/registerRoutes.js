@@ -19,10 +19,15 @@ module.exports=(app)=>{
                 //console.log(req.body.roll)
                 //console.log(req.body.email)
                 
-                var mailOptions={
-                    to:req.body.email,
-                    subject:"OTP for registration : ",
-                    html:"<h3>OTP for account verification is </h3>"+"<h1 style='font-weight:bold'>"+otp+"</h1>"
+                var mailOptions = {
+                  from: process.env.user,
+                  to: req.body.email,
+                  subject: "OTP for registration : ",
+                  html:
+                    "<h3>OTP for account verification is </h3>" +
+                    "<h1 style='font-weight:bold'>" +
+                    otp +
+                    "</h1>",
                 };
                 //send OTP
                 transporter.sendMail(mailOptions,(error,info)=>{
@@ -41,15 +46,21 @@ module.exports=(app)=>{
         //resend otp
         app.post("/resend",(req,res)=>{
     
-                var mailOptions={
-                    to:email,
-                    subject:"OTP for registration : ",
-                    html:"<h3>OTP for account verification is </h3>"+"<h1 style='font-weight:bold'>"+otp+"</h1>"
+                var mailOptions = {
+                  from: process.env.user,
+                  to: email,
+                  subject: "OTP for registration : ",
+                  html:
+                    "<h3>OTP for account verification is </h3>" +
+                    "<h1 style='font-weight:bold'>" +
+                    otp +
+                    "</h1>",
                 };
                 //resend otp
                 transporter.sendMail(mailOptions,(error,info)=>{
                     if(error){
                         return console.log(error);
+                        return res.status(500).send("error sending otp");
                     }
                     console.log('Message sent : %s',info.messageId);
                     console.log('Preview URL: %s',nodemailer.getTestMessageUrl(info));

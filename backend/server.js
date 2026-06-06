@@ -99,7 +99,7 @@ io.on('connect',(socket)=>{
 })
 
 //connect to mongoDb
-mongoose.connect(process.env.MONGO_URL,{ useUnifiedTopology: true,useNewUrlParser:true })
+mongoose.connect(process.env.MONGO_URI,{ useUnifiedTopology: true,useNewUrlParser:true })
     .then(()=>{
         console.log('database is connected')
     })
@@ -116,7 +116,7 @@ require('./chat/chatRoutes')(app)
 require('./chat/userRoutes')(app)
 
 //run server
-const PORT=process.env.PORT||5000;
+const PORT=process.env.PORT||5001;
 server.listen(PORT,()=>{
     console.log("server is running at port",PORT)
 })

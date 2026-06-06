@@ -26,7 +26,7 @@ export default function Room({ peerInstance, currentUserId, theme, setTheme }) {
   const screen = useRef(null); //scr object of stream
   const [shared, isShared] = useState(false);
   const [mesharing, setMesharing] = useState(false);
-  let temp = false;
+  
   const [muted, setMuted] = useState(false); //audio toggle
   const [videoMuted, setVideoMuted] = useState(false); //video toggle
   const [participants, setParticipants] = useState([]); //all participants in room excluding me
@@ -205,9 +205,9 @@ export default function Room({ peerInstance, currentUserId, theme, setTheme }) {
         const { participants } = roomInformation;
         console.log(participants);
         if (participants.length) {
-          const participantCalls = ([] = participants
-            .filter((participant) => participant.id !== currentUserId)
-            .map((participant) => call(participant)));
+         const participantCalls = participants
+           .filter((participant) => participant.id !== currentUserId)
+           .map((participant) => call(participant));
 
           Promise.all(participantCalls).then((values = []) => {
             const validParticipants = values.filter((value) => value);
@@ -252,7 +252,7 @@ export default function Room({ peerInstance, currentUserId, theme, setTheme }) {
         };
         screenStream.current = stream;
         setMesharing(true);
-        temp = true;
+        
         isShared(true);
         screen.current.srcObject = stream;
         screen.current.play();
