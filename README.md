@@ -1,5 +1,5 @@
 
-### ConnectHub
+# ConnectHub
 ## Available Live at https://microsoft-team-anshika.herokuapp.com/
 
 ## Functionalities
