@@ -1,8 +1,6 @@
-# Ms teams Clone
-### Microsoft Engage'21
-## Available Live at https://microsoft-team-anshika.herokuapp.com/
 
-## Working demo at https://youtu.be/iZ2EYGh3OsE
+### ConnectHub
+## Available Live at https://microsoft-team-anshika.herokuapp.com/
 
 ## Functionalities
 
@@ -37,9 +35,6 @@ npm start
 cd backend
 node server.js
 ```
-## Home Page
-![light](https://user-images.githubusercontent.com/74226523/125418825-ef6b98e6-0dcb-4616-b659-0c5ab0d40134.jpeg)
-![dark](https://user-images.githubusercontent.com/74226523/125418833-63a1b959-3dae-4eea-a074-258ee9cbf127.jpeg)
 
 
 ## Video Call
@@ -72,4 +67,3 @@ node server.js
 
 
 
-### Separate backend repository - https://github.com/anshika-18/Ms-team-backend
